@@ -1,0 +1,18 @@
+<h1>Movies</h1>
+<div *ngIf="loading">Loading...</div>
+<div *ngIf="movies.length > 0">
+  <div *ngFor="let movie of movies">
+    <div class="movie-item">
+      <img [src]="movie.photoUrl" alt="{{ movie.name }}" class="movie-image">
+      <div class="movie-details">
+        <h2>{{ movie.name }}</h2>
+        <p>Release Year: {{ movie.releaseYear }}</p>
+        <p>Rating: {{ movie.rating }}</p>
+        <p>Genre: {{ movie.genre }}</p>
+        <p>Country: {{ movie.country }}</p>
+        <p>Language: {{ movie.language }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+

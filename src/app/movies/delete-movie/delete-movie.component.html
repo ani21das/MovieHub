@@ -1,0 +1,15 @@
+<h1>Delete Movie</h1>
+<div *ngFor="let movie of movies">
+  <div class="movie-item">
+    <img [src]="movie.photoUrl" alt="{{ movie.name }}" class="movie-image">
+    <div class="movie-details">
+      <h2>{{ movie.name }}</h2>
+      <p>Release Year: {{ movie.releaseYear }}</p>
+      <p>Rating: {{ movie.rating }}</p>
+      <p>Genre: {{ movie.genre }}</p>
+      <p>Country: {{ movie.country }}</p>
+      <p>Language: {{ movie.language }}</p>
+      <button (click)="deleteMovie(movie.id)" class="btn btn-danger">Delete</button>
+    </div>
+  </div>
+</div>
